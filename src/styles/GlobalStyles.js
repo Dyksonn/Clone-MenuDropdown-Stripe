@@ -26,13 +26,27 @@ export default createGlobalStyle`
     }
 
     .dropdown-arrow {
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #fff;
 
+            top: -6.5px;
+            left: -8px;
+            border-radius: 4px 0 0 0;
+
+            transform: rotate(45deg);
+        }
     }
 
     .dropdown-container {
         position: absolute;
         overflow: hidden;
-        box-shadow: -3px -3px 5px rgba(82, 95, 127, 0.04);
+        box-shadow: -3px -3px 5px rgba(50, 50, 93, 0.25);
 
         background: #fff;
         border-radius: 4px;
@@ -40,5 +54,12 @@ export default createGlobalStyle`
 
     .dropdown-section {
         position: absolute;
+    }
+
+    .dropdown-background {
+        position: absolute;
+        bottom: 0;
+        background: #c9c9c9;
+        width: 100%;
     }
 `;
